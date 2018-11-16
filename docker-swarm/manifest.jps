@@ -156,6 +156,13 @@ actions:
         manager_token: ${this.manager}
         worker_token: ${this.worker}
         name: swarm-success-no-ssh-keys.md
+        
+  upload-ssh-keys-and-send-tokens:	
+    - script: ${globals.upload-ssh-keys}	
+    - send-success:	
+        manager_token: ${this.manager}	
+        worker_token: ${this.worker}	
+        name: swarm-success.md
     
   send-success: 
     script: |
