@@ -98,7 +98,6 @@ onInstall:
   - if (${settings.autoscaling}): scaling-triggers
   - if ('${settings.stack}' == 'deploy'): deploy
   - portainer
-  - get-tokens
   
 actions:
   init-swarm:
