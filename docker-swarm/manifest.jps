@@ -147,9 +147,6 @@ actions:
   get-tokens:
     script: ${globals.get-tokens}
     next: upload-ssh-keys-and-send-tokens
-
-  get-tokens:
-    script: ${globals.get-tokens}
     
   no-ssh-keys:
     - send-success:
