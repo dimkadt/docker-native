@@ -4,9 +4,4 @@ if (resp.objects.length == 0) return {result: 99, error: "not tokens found", typ
 
 r = {result:0, onAfterReturn : {}}
 
-r.onAfterReturn[next] = {
-  manager: resp.objects[0]['manager'],
-  worker: resp.objects[0]['worker']
-}
-
 return r
