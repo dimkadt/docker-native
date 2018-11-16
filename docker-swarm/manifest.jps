@@ -97,7 +97,6 @@ onInstall:
   - scaling-events
   - if (${settings.autoscaling}): scaling-triggers
   - if ('${settings.stack}' == 'deploy'): deploy
-  - re-import-button
   - portainer
   - get-tokens
   
@@ -136,30 +135,15 @@ actions:
     - if ('${settings.yml}'.indexOf('/example-voting-app/') > -1):
         setGlobals:
           startPage: http://${env.domain}:5000/
-        
-  re-import-button:
-    install:
-      jps: ${baseUrl}/re-import-ssh-keys.jps?_r=${fn.random}
-      nodeGroup: cp
-      settings:
-        upload-ssh-keys: ${globals.upload-ssh-keys}
-        
+
   get-tokens:
     script: ${globals.get-tokens}
-    next: upload-ssh-keys-and-send-tokens
     
   no-ssh-keys:
     - send-success:
         manager_token: ${this.manager}
         worker_token: ${this.worker}
         name: swarm-success-no-ssh-keys.md
-      
-  upload-ssh-keys-and-send-tokens:
-    - script: ${globals.upload-ssh-keys}
-    - send-success:
-        manager_token: ${this.manager}
-        worker_token: ${this.worker}
-        name: swarm-success.md
     
   send-success: 
     script: |
