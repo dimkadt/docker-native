@@ -2,6 +2,7 @@
     "jpsType": "update",
     "id": "portainer",
     "name": "Portainer UI",
+    "ssl": "true",
     "settings": {
         "fields": [{
             "type": "list",
