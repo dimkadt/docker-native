@@ -81,6 +81,12 @@
     },
     "removeNode": [
       {
+        "cmd[${nodes.cp.master.id}]": [
+          "NODE=node${this.id}-${env.domain}",
+          "docker node demote $NODE &>> /var/log/run.log"
+        ]
+      },
+      {
         "cmd[${this.id}]": "docker swarm leave --force &>> /var/log/run.log"
       },
       {
