@@ -1,7 +1,7 @@
 ---
 type: install
 version: 1.1
-id: docker-swarm-ce
+id: dsc-dimkadt
 baseUrl: https://raw.githubusercontent.com/dimkadt/docker-native/master/addons
 description:
   text: /text/description-swarm.md
@@ -12,7 +12,7 @@ categories:
   - apps/microservices
   - apps/dev-and-admin-tools
 logo: ../images/docker-swarm-logo-89x70.png
-name: Docker Swarm Cluster
+name: DSwCluster
 targetRegions:
   type: vz7
 
