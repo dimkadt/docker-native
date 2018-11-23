@@ -92,7 +92,6 @@
       {
         "cmd[${nodes.cp.master.id}]": [
           "NODE=node${this.id}-${env.domain}",
-          "docker node demote $NODE &>> /var/log/run.log",
           "docker node rm --force $NODE &>> /var/log/run.log"
         ]
       }
